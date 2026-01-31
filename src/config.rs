@@ -60,7 +60,7 @@ impl Default for Config {
         Self {
             color_mode: ColorMode::Color,
             hierarchical: Hierarchical::Stacked,
-            mode: PathSimplifyMode::None,
+            mode: PathSimplifyMode::Spline,
             filter_speckle: 0,
             color_precision: 8,
             layer_difference: 0,
