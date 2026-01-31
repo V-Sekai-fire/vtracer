@@ -76,8 +76,10 @@ jobs:
       - name: Archive windows binary
         run: cd vtracer-pixel-windows && zip ../vtracer-pixel-windows.zip vtracer-pixel.exe
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
+          name: vtracer-pixel ${{ github.ref_name }}
+          generate_release_notes: true
           prerelease: ${{ contains(github.ref, '-') }}
           files: |
             vtracer-pixel-linux.zip
